@@ -10,7 +10,15 @@ router.get('/',  function(req, res, next){
   }).catch((err) =>{
     console.log("err")
   })
-  
+});
+
+router.get('/details',  function(req, res, next){
+  const {data} = axios.get("https://dummyjson.com/products/1")
+  .then((response) =>  {
+    res.render('details', {title: 'details', products: response.data });
+  }).catch((err) =>{
+    console.log("err")
+  })
 });
 
 module.exports = router;
