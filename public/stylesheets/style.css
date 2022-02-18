@@ -10,11 +10,24 @@ a{
   height: 16px;
 }
 
-.card{
+.home .card{
   height: 450px;
   max-height: 500px;
 }
 
 .card .card-header img{
   height: 240px;
+}
+
+
+.details .row .col-md-3 img{
+  height: 300px;
+  width: 100%;
+}
+
+.all-images .card{
+  height: 200px;
+}
+.all-images .card img{
+  height: 170px;
 }
