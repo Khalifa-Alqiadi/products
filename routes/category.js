@@ -4,9 +4,9 @@ var router = express.Router();
 
 /* GET category page. */
 router.get('/',  function(req, res, next){
-  const {data} = axios.get("https://dummyjson.com/products/category/smartphones")
+  axios.get("https://dummyjson.com/products/category/smartphones")
   .then((response) =>  {
-    res.render('index', {title: 'category', category: response.data });
+    res.render('category', {title: 'category', products: response.data.products });
   }).catch((err) =>{
     console.log("err")
   })
