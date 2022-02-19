@@ -1,0 +1,9 @@
+<%- include('includes/head.ejs') %>  
+<%- include('includes/nav.ejs') %>
+
+
+<% for(var i = 0; i < products.length; i++){ %>
+    <h1><%= products[i] %></h1>
+<% } %>
+
+<%- include('includes/footer.ejs') %>
