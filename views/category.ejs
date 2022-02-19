@@ -6,17 +6,17 @@
       <h1>All Products</h1>
     </div>
     <div class="row row-cols-1 row-cols-md-3 row-cols-xl-4">
-      <% for(var item in products ){ %>
+      <% products.forEach(item => { %>
         <div class="col">
           <div class="card m-1 d-flex flex-column align-items-center justify-content-between">
             <div class="card-header bg-transparent border-0 py-0 px-4">
-              <img class="img-fluid mx-auto d-block " src="<%= products[item].thumbnail %>" alt="slide 1">
+              <img class="img-fluid mx-auto d-block " src="<%= item.thumbnail %>" alt="slide 1">
             </div>
             <div class="card-body text-center my-0 p-0 d-flex flex-column align-items-center justify-content-evenly">
               <a href="/details" class="fs-6 text-dark"><i class="fa fa-phone"></i></i></i>
-                <%= products[item].title %></a>
-                <p class="text-muted fw-bold"><i class="fa fa-home me-2"></i><%= products[item].brand  %></p>
-                <h1 class="fs-4 text-danger">$<%= products[item].price %></h1>
+                <%= item.title %></a>
+                <p class="text-muted fw-bold"><i class="fa fa-home me-2"></i><%= item.brand  %></p>
+                <h1 class="fs-4 text-danger">$<%= item.price %></h1>
             </div>
             <div class="card-footer w-100 my-0 d-flex align-items-center justify-content-between bg-transparent border-0">
               <i class="fa fa-star fs-4"></i>
@@ -25,7 +25,7 @@
             </div>
           </div>
         </div>
-      <% } %>
+      <% }) %>
     </div>
   </div>
 </div>
